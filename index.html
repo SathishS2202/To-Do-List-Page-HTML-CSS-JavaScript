@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do List using Html,CSS and JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Build-to-do-Page</h1>
+        <div class="content">
+        <input type="text" id="add" placeholder="Enter your Task here" name="task">
+        <button type="submit" onclick="add()">ADD</button> <br>
+        <div class="task">
+        <input type="text"  name="delete">
+        <button type="submit" onclick="remove()">DELETE</button> <br>
+        <input type="text"  name="delete">
+        <button type="submit" onsubmit="remove()">DELETE</button> <br>
+        <input type="text"  name="delete">
+        <button type="submit" onclick="remove()">DELETE</button> <br>
+    </div>
+    </div>
+    </div>
+    <script>
+        function add(){
+            let task=document.getElementsById("add");
+            if(task!==null)
+           {
+               message.innertext="Added";
+           }  
+        }
+        function remove() {
+            var task1=document.getElementById("remove");
+            task1.remove();
+            
+        }
+
+    </script>
+    
+</body>
+</html>  

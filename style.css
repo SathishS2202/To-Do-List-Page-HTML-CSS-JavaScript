@@ -1,0 +1,39 @@
+ body{
+    background-color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+}
+.container{
+    margin: 100px 400px;
+    align-items: center;
+    border: 2px solid black;
+    width: 40%;
+    height:70vh;
+    background-color:darkgray ;
+}
+h1{
+    text-align: center;
+}
+.task{
+    margin-top: 20px;
+}
+input{
+    margin: 10px 60px;
+    padding: 8px;
+    width: 50%;
+}
+button{
+    width: 20%;
+    margin-left: -50px;
+    padding: 8px;
+    border-radius: 5px;
+    color: bisque;
+    background-color: blue;
+}
+.content{
+    margin-top: 50px;
+}
+button:hover{
+    text-decoration: underline;
+    background-color: green;
+}
