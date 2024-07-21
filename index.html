@@ -3,41 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-do List using Html,CSS and JavaScript</title>
-    <link rel="stylesheet" href="style.css">
+    <title>To-do List using Html, CSS and JavaScript</title>
+    <link rel="stylesheet" href="todo.css">
 </head>
 <body>
 
     <div class="container">
-        <h1>Build-to-do-Page</h1>
+        <h1>To-do List</h1>
         <div class="content">
-        <input type="text" id="add" placeholder="Enter your Task here" name="task">
-        <button type="submit" onclick="add()">ADD</button> <br>
-        <div class="task">
-        <input type="text"  name="delete">
-        <button type="submit" onclick="remove()">DELETE</button> <br>
-        <input type="text"  name="delete">
-        <button type="submit" onsubmit="remove()">DELETE</button> <br>
-        <input type="text"  name="delete">
-        <button type="submit" onclick="remove()">DELETE</button> <br>
+            <label for="taskInput">Task Name</label>
+            <input type="text" id="taskInput" placeholder="Enter your task here">
+            <div class="button">
+                <button onclick="addTask()">ADD</button>
+                <button onclick="removeTask()">DELETE</button>
+            </div>
+            <ul id="taskList"></ul>
+        </div>
     </div>
-    </div>
-    </div>
-    <script>
-        function add(){
-            let task=document.getElementsById("add");
-            if(task!==null)
-           {
-               message.innertext="Added";
-           }  
-        }
-        function remove() {
-            var task1=document.getElementById("remove");
-            task1.remove();
-            
-        }
 
+    <script>
+        function addTask() {
+            var taskInput = document.getElementById("taskInput");
+            var taskText = taskInput.value.trim();
+
+            if (taskText !== '') {
+                var taskList = document.getElementById("taskList");
+                var newTask = document.createElement('li');
+                newTask.textContent = taskText;
+                taskList.appendChild(newTask);
+                taskInput.value = '';
+            }
+        }
+        function removeTask() {
+            var taskList = document.getElementById("taskList");
+            if (taskList.children.length > 0) {
+                taskList.removeChild(taskList.lastChild);
+            }
+        }
     </script>
     
 </body>
-</html>  
+</html>
